@@ -2,17 +2,17 @@
 ### Pinball loss : 2.01536 / Private rank : 7위 (상위 2%)
 
 [대회 설명]
-7일(Day 0~ Day6) 동안의 데이터를 인풋으로 활용하여, 향후 2일(Day7 ~ Day8) 동안의 30분 간격의 발전량(TARGET)을 예측 (1일당 48개씩 총 96개 타임스텝에 대한 예측)
+> 7일(Day 0~ Day6) 동안의 데이터를 인풋으로 활용하여, 향후 2일(Day7 ~ Day8) 동안의 30분 간격의 발전량(TARGET)을 예측 (1일당 48개씩 총 96개 타임스텝에 대한 예측)
 
 [데이터 구성]
-Hour - 시간
-Minute - 분
-DHI - 수평면 산란일사량(Diffuse Horizontal Irradiance (W/m2))
-DNI - 직달일사량(Direct Normal Irradiance (W/m2))
-WS - 풍속(Wind Speed (m/s))
-RH - 상대습도(Relative Humidity (%))
-T - 기온(Temperature (Degree C))
-Target - 태양광 발전량 (kW)
+> Hour - 시간
+> Minute - 분
+> DHI - 수평면 산란일사량(Diffuse Horizontal Irradiance (W/m2))
+> DNI - 직달일사량(Direct Normal Irradiance (W/m2))
+> WS - 풍속(Wind Speed (m/s))
+> RH - 상대습도(Relative Humidity (%))
+> T - 기온(Temperature (Degree C))
+> Target - 태양광 발전량 (kW)
 
 [모델링 과정]
 본 대회에서 Light GBM을 활용한 예측과 CNN을 활용한 예측을 진행하였습니다. 본 대회의 평가지표인 pinball_loss(quantile)를 최소화하는 모델 구축을 위해 두 가지 방법 모두 quantile_loss를 loss_function으로 설정하였습니다. 또한, 예측해야하는 2일 중 각각의 날짜를 Target값으로 설정하여 결론적으로는, 일자별(2) * 0.1~0.9quantile별(9)별로 총 18번의 학습을 통해 예측값을 구하였습니다.
