@@ -26,4 +26,3 @@ Target - 태양광 발전량 (kW)
 2) CNN 활용 모델링   
 시간대별로 명확한 Target 값 차이가 존재하기 때문에, 동일 시간대의 값을 위주로 학습하는 것이 중요하다고 생각되었습니다. 이를 위해 Dilated_rate를 하루 간격인 48로 설정하여(24h/30m), 여러개의 Conv Layer를 거쳐 임베딩 값의 time_step이 7일치에서 최종적으로는 1일치로 줄어들도록 모델을 구성하였습니다.    
 또한, 특정 시간대의 바로 앞, 뒤 시점의 값을 고려하여 더욱 복잡한 시계열성을 학습할 수 있도록, 가장 첫번째 Conv Layer window_size 3의 Conv Layer로 구성하였습니다.
-![image](https://user-images.githubusercontent.com/53526441/118768637-36568600-b8ba-11eb-8e87-017e0a283f0b.png)
