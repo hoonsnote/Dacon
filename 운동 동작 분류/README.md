@@ -1,5 +1,5 @@
 ## 운동 동작 분류 AI 경진대회
-### Logloss : 0.65244 / Private rank : 26위(상위 8%)
+### Logloss : 0.65244 / Private rank : 26위 (상위 8%)
 
 
 [주제 및 배경]
