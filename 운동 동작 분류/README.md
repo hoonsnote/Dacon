@@ -1,5 +1,7 @@
 # 운동 동작 분류 AI 경진대회 (Private rank : 26위 / 상위 8%)
 
+![Uploading image.png…]()
+
 
 본 대회의 작업 과정은 다음과 같습니다.
 
