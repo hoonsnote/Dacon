@@ -5,7 +5,7 @@
 > 7일(Day 0~ Day6) 동안의 데이터를 인풋으로 활용하여, 향후 2일(Day7 ~ Day8) 동안의 30분 간격의 발전량(TARGET)을 예측 (1일당 48개씩 총 96개 타임스텝에 대한 예측)
 
 [데이터 구성]
-> Hour - 시간   > Minute - 분   DHI - 수평면 산란일사량(Diffuse Horizontal Irradiance (W/m2))   DNI - 직달일사량(Direct Normal Irradiance (W/m2))
+> Hour - 시간      Minute - 분   DHI - 수평면 산란일사량(Diffuse Horizontal Irradiance (W/m2))   DNI - 직달일사량(Direct Normal Irradiance (W/m2))
 > WS - 풍속(Wind Speed (m/s))
 > RH - 상대습도(Relative Humidity (%))
 > T - 기온(Temperature (Degree C))
